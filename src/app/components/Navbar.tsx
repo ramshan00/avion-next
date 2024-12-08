@@ -7,6 +7,12 @@ import { RiAccountCircleLine } from "react-icons/ri";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [cartItems, setCartItems] = useState<number>(0); // State to track cart items
+
+  // Function to handle adding an item to the cart
+  const handleAddToCart = () => {
+    setCartItems(cartItems + 1);
+  };
 
   return (
     <header className="border-b">
@@ -40,7 +46,18 @@ export default function Navbar() {
           </a>
           <div className="flex items-center text-2xl space-x-4">
             <FiSearch className="cursor-pointer  hover:text-gray-500" />
-            <IoCartOutline className="cursor-pointer  hover:text-gray-500" />
+            {/* Cart Icon */}
+            <a href="/cart">
+              <div className="relative">
+                <IoCartOutline className="cursor-pointer  hover:text-gray-500" />
+                {cartItems > 0 && (
+                  <span className="absolute top-0 right-0 bg-red-600 text-white text-xs rounded-full px-1">
+                    {cartItems}
+                  </span>
+                )}
+              </div>
+            </a>
+
             <RiAccountCircleLine className="cursor-pointer hover:text-gray-500" />
           </div>
         </nav>
@@ -73,7 +90,14 @@ export default function Navbar() {
           </a>
           <div className="flex space-x-4 mt-2  hover:text-gray-500">
             <FiSearch />
-            <IoCartOutline />
+            <div className="relative">
+              <IoCartOutline onClick={handleAddToCart} />
+              {cartItems > 0 && (
+                <span className="absolute top-0 right-0 bg-red-600 text-white text-xs rounded-full px-1">
+                  {cartItems}
+                </span>
+              )}
+            </div>
             <RiAccountCircleLine />
           </div>
         </div>

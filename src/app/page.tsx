@@ -134,6 +134,38 @@ export default function HomePage() {
             </button>
           </div>
         </div>
+        <h2 className="text-3xl mb-4 px-11">You might also love these</h2>
+        <div className="container mx-auto mt-2 flex flex-col items-center">
+        
+        <div className="flex flex-wrap justify-center gap-4">
+          {/* Rectangle Image */}
+          <Image
+            src="/sp1.png"
+            width={600}
+            height={600}
+            alt="Poplar Sofa"
+            className="w-auto h-full object-cover flex-shrink-0"
+          />
+
+          {/* Top Right Image */}
+          <Image
+            src="/sp2.png"
+            width={100}
+            height={100}
+            alt="Dandy Chair"
+            className="w-72 h-auto object-cover flex-shrink-0"
+          />
+
+          {/* Bottom Right Image */}
+          <Image
+            src="/sp3.png"
+            width={100}
+            height={100}
+            alt="Dandy Chair"
+            className="w-72 h-auto object-cover flex-shrink-0"
+          />
+        </div>
+      </div>
         {/* Section 5: Join the Club */}
         <section id="contact"className="bg-white text-center text-black py-16">
           <h2 className="text-3xl sm:text-4xl mb-4">
