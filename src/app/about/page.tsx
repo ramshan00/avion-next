@@ -9,7 +9,7 @@ export default function AboutPage() {
     <div className="bg-white text-gray-900">
       {/* Section 1: Banner */}
       <section className="relative z-10 bg-gray-100 p-32 text-center">
-        <h1 className="text-3xl sm:text-4xl max-w-3xl mx-auto">
+        <h1 className="text-3xl sm:text-2xl max-w-3xl mx-auto">
           A brand built on the love of craftsmanship, quality, and outstanding
           customer service
         </h1>

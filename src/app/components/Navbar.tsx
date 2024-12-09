@@ -88,16 +88,19 @@ export default function Navbar() {
           <a href="#blog" className="block hover:text-gray-700">
             Blog
           </a>
-          <div className="flex space-x-4 mt-2  hover:text-gray-500">
+          <div className="flex space-x-4 mt-2 text-2xl hover:text-gray-500">
             <FiSearch />
+            <a href="/cart">
+
             <div className="relative">
               <IoCartOutline onClick={handleAddToCart} />
               {cartItems > 0 && (
-                <span className="absolute top-0 right-0 bg-red-600 text-white text-xs rounded-full px-1">
+                <span className="absolute top-0 right-0  bg-red-600 text-white text-xs rounded-full px-1">
                   {cartItems}
                 </span>
               )}
             </div>
+            </a>
             <RiAccountCircleLine />
           </div>
         </div>
